@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Battery</title>
+		<link rel="stylesheet" href="./battery.css" />
+		<link rel="stylesheet" href="../../../css/returnHome.css" />
+
+		<script
+			src="https://kit.fontawesome.com/e07fba0c03.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div id="returnHome">
+			<a href="../../../index.html">
+				<i class="fas fa-home"></i>
+			</a>
+		</div>
+		<div id="container">
+			<h1 class="contrastedText">Battery</h1>
+			<div id="battery">
+				<div id="progress"></div>
+				<i id="outOfCharge" class="fas fa-plug hide"></i>
+				<i id="fullCharge" class="fas fa-bolt hide"></i>
+			</div>
+			<h2 id="batteryValue" class="contrastedText">100%</h2>
+		</div>
+		<div id="controller">
+			<input type="range" id="sliderBar" min="0" max="100" value="50"/>
+			<button id="slideReset" onclick="getBatteryPercent()">Reset</button>
+		</div>
+		<div id="leftBall" class="backgroundBall"></div>
+		<div id="rightBall" class="backgroundBall"></div>
+		<script src="./battery.js"></script>
+	</body>
+</html>
