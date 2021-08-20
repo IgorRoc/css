@@ -14,17 +14,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-}
-
-body:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	width: 100%;
-	height: 100%;
-
 	background: linear-gradient(#fefefe, #b8b8b8);
 }
 
@@ -129,7 +118,7 @@ body:before {
 	border-radius: 0px 0px 20px 20px;
 	border: 1px solid #ffffff55;
 	border-top: none;
-	
+
 	box-shadow: 0px 10px 20px #0005;
 
 	color: #fff;
@@ -180,9 +169,11 @@ body:before {
 	padding: 10px 20px;
 	border: none;
 	outline: none;
+	border-radius: 10px;
 
-	background: linear-gradient(90deg, #ffc107, #dfa90a);
-	color: #333;
+	background: linear-gradient(90deg, #a041ae, #fa4183);
+	box-shadow: 0px 5px 10px #3334;
+	color: #fff;
 
 	font-size: 1em;
 	font-weight: bold;
@@ -191,7 +182,7 @@ body:before {
 }
 
 .contrastedText {
-	background-image: linear-gradient(90deg, #ffc107, #dfa90a, #ffc107);
+	background: linear-gradient(90deg, #e25cf7, #cf235f, #e25cf7);
 
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -202,6 +193,25 @@ body:before {
 	animation: textGradientAnimation 2s infinite;
 
 	color: transparent;
+}
+
+#container h1,
+#container h2 {
+	background: linear-gradient(90deg, #e25cf7, #cf235f, #e25cf7);
+
+	-webkit-background-clip: text;
+	background-clip: text;
+
+	background-size: 200%;
+	background-position: 0%;
+
+	animation: textGradientAnimation 2s infinite;
+
+	color: transparent;
+}
+
+#container h2{
+	animation-delay: 1s;
 }
 
 @keyframes textGradientAnimation {
@@ -232,28 +242,48 @@ body:before {
 	transform: translate(10%, 10%);
 }
 
-.wrapperBall{
+.wrapperBall {
 	position: absolute;
 
 	animation: floatDown 2s infinite ease-in-out;
 }
 
-.wrapperBall.delay1{
+.wrapperBall.delay1 {
 	animation: floatUp 2s infinite ease-in-out;
 }
 
 @keyframes floatUp {
-	0%, 100%{
+	0%,
+	100% {
 		transform: translateY(-50px);
-	}50%{
+	}
+	50% {
 		transform: translateY(50px);
 	}
 }
 
 @keyframes floatDown {
-	0%, 100%{
+	0%,
+	100% {
 		transform: translateY(50px);
-	}50%{
+	}
+	50% {
 		transform: translateY(-50px);
+	}
+}
+
+@media (max-width: 800px) {
+	.backgroundBall {
+		width: 200px;
+		height: 200px;
+	}
+	#leftBall {
+		background-image: linear-gradient(#f2eff4, #982aae);
+		transform: translate(-130%, -200%);
+	}
+
+	#rightBall {
+		background-image: linear-gradient(#f9296a, #b69aa3);
+		transform: translate(-10%, 70%);
 	}
 }

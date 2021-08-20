@@ -209,3 +209,10 @@ body::after {
 		transform: rotateZ(calc(var(--deslocamento) + 1turn));
 	}
 }
+
+@media (max-width: 1200px) {
+	#box{
+		width: 300px;
+		height: 300px;
+	}
+}
