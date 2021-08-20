@@ -29,11 +29,15 @@
 			<h2 id="batteryValue" class="contrastedText">100%</h2>
 		</div>
 		<div id="controller">
-			<input type="range" id="sliderBar" min="0" max="100" value="50"/>
+			<input type="range" id="sliderBar" min="0" max="100" value="50" />
 			<button id="slideReset" onclick="getBatteryPercent()">Reset</button>
 		</div>
-		<div id="leftBall" class="backgroundBall"></div>
-		<div id="rightBall" class="backgroundBall"></div>
+		<div class="wrapperBall delay1">
+			<div id="leftBall" class="backgroundBall"></div>
+		</div>
+		<div class="wrapperBall">
+			<div id="rightBall" class="backgroundBall"></div>
+		</div>
 		<script src="./battery.js"></script>
 	</body>
 </html>

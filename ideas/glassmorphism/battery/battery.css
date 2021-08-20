@@ -128,7 +128,8 @@ body:before {
 
 	border-radius: 0px 0px 20px 20px;
 	border: 1px solid #ffffff55;
-
+	border-top: none;
+	
 	box-shadow: 0px 10px 20px #0005;
 
 	color: #fff;
@@ -223,10 +224,36 @@ body:before {
 
 #leftBall {
 	background-image: linear-gradient(#f2eff4, #982aae);
-	transform: translate(-80%, -70%);
+	transform: translate(-130%, -100%);
 }
 
 #rightBall {
 	background-image: linear-gradient(#f9296a, #b69aa3);
-	transform: translate(60%, 50%);
+	transform: translate(10%, 10%);
+}
+
+.wrapperBall{
+	position: absolute;
+
+	animation: floatDown 2s infinite ease-in-out;
+}
+
+.wrapperBall.delay1{
+	animation: floatUp 2s infinite ease-in-out;
+}
+
+@keyframes floatUp {
+	0%, 100%{
+		transform: translateY(-50px);
+	}50%{
+		transform: translateY(50px);
+	}
+}
+
+@keyframes floatDown {
+	0%, 100%{
+		transform: translateY(50px);
+	}50%{
+		transform: translateY(-50px);
+	}
 }
