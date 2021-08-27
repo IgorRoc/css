@@ -19,6 +19,23 @@ slider.addEventListener("change", (e) => {
 	}
 })
 
+slider.addEventListener("mousedown", (e) => {
+	slider.addEventListener("mousemove", (ev) => {
+		progress.style.width = slider.value + "%"
+		batteryValue.innerText = slider.value + "%"
+		if (slider.value <= 0) {
+			outOfCharge.classList.remove("hide")
+			fullCharge.classList.add("hide")
+		} else if (slider.value >= 100) {
+			fullCharge.classList.remove("hide")
+			outOfCharge.classList.add("hide")
+		} else {
+			outOfCharge.classList.add("hide")
+			fullCharge.classList.add("hide")
+		}
+	})
+})
+
 getBatteryPercent()
 function getBatteryPercent() {
 	console.log("entrou")
